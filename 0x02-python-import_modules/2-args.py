@@ -11,7 +11,7 @@ if __name__ == "__main__":
 		print('{:d} argument:'.format(num))
 		print('{:d}: {:s}'.format(num, args[num]))
 	else:
-		print('{:d} arguements:'.format(num))
+		print('{:d} arguments:'.format(num))
 		while (size < num):
 			size += 1
 			print('{:d}: {:s}'.format(size, args[size]))
