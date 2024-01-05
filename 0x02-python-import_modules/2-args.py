@@ -8,7 +8,7 @@ if __name__ == "__main__":
 	if num == 0:
 		print('{:d} arguments.'.format(num))
 	elif num == 1:
-		print('{:d} arguement:'.format(num))
+		print('{:d} argument:'.format(num))
 		print('{:d}: {:s}'.format(num, args[num]))
 	else:
 		print('{:d} arguements:'.format(num))
