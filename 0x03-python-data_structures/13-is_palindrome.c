@@ -19,6 +19,9 @@ int is_palindrome(listint_t **head)
 		if (curr->n != second->n)
 			return (0);
 
+		if (curr == second)
+			break;
+
 		past = second;
 		curr = curr->next;
 	}
