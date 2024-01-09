@@ -17,7 +17,7 @@ int is_palindrome(listint_t **head)
 			second = second->next;
 
 		if (curr->n != second->n)
-			return (0)
+			return (0);
 
 		past = second;
 		curr = curr->next;
