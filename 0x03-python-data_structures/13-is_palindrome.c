@@ -1,5 +1,7 @@
 #include "lists.h"
 
+listint_t *second_hf(listint_t *second_p, listint_t *past_p);
+
 /**
  * is_palindrome - checks if a singly linked list is a palindrome.
  * @head: The start of the linked list.
