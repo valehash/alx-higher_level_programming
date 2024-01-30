@@ -1,0 +1,26 @@
+ """
+ 	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer(5, 90)
+	95
+	
+	>>> add_integer(5.0, 5)
+	10
+	
+	#returns an error if the b param is not an integer or float
+	>>> add_integer("pink",98)
+	Traceback (most recent call last):
+	... 
+	TypeError: a must be an integer
+
+	#returns an error if the b param is not an integer or flaot
+
+	>>> add_integer(66,"yellow")
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+	>>> add_integer(-10,10)
+	0
+	
+	>>> add_integer(-10, -10)
+	-20
