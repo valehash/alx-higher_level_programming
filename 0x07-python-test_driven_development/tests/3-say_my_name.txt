@@ -1,6 +1,6 @@
- """
- 	>>> name = __import__('2-say_my_name').say_my_name
-	
+"""
+>>> name = __import__('3-say_my_name').say_my_name
+
 	>>> name("Michael", "Elekwachi")
 	My name is Michael Elekwachi
 	
@@ -25,4 +25,4 @@
 	Traceback (most recent call last):
 	...
 	TypeError: first_name must be a string
-"""
+
