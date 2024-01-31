@@ -1,0 +1,31 @@
+"""
+
+	>>> square = __import__('4-print_square').print_square
+
+	>>> square(0)
+	
+	
+	>>> square(4)
+	####
+	####
+	####
+	####
+	
+	>>> square(1)
+	#
+
+	>>> square("Smith")
+	Traceback (most recent call last):
+		...
+	TypeError: size must be an integer
+
+	>>> square(-10)
+	Traceback (most recent call last):
+		...
+	ValueError: size must be >= 0
+	
+	>>> square(0.6)
+	Traceback (most recent call last):
+		...
+	TypeError: size must be an integer
+
