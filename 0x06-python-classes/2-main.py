@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+import pdb
+pdb.set_trace()
 Square = __import__('2-square').Square
 
 my_square_1 = Square(3)
