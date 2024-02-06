@@ -3,7 +3,7 @@
 	>>> bg = BaseGeometry()
 	
 	#testing if the code works
-	>>> print(bg.area())
+	>>> bg.area()
 	Traceback (most recent call last):
 		...
 	Exception: area() is not implemented
@@ -41,5 +41,31 @@
 	TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'name'
 
 	>>> bg.integer_validator("john", 12)
+	
+	>>> bg.integer_validator("number",{40,0}) 
+	Traceback (most recent call last):
+		...
+	TypeError: number must be an integer
+	
+	>>> bg.integer_validator("number",[40,20]) 
+	Traceback (most recent call last):
+		...
+	TypeError: number must be an integer
+
+	>>> bg.integer_validator("number",True) 
+	Traceback (most recent call last):
+		...
+	TypeError: number must be an integer
+
+	>>> bg.integer_validator("number",None) 
+	Traceback (most recent call last):
+		...
+	TypeError: number must be an integer
+
+	>>> bg.integer_validator("number",(20,30)) 
+	Traceback (most recent call last):
+		...
+	TypeError: number must be an integer
+
 
 """
