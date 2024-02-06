@@ -31,6 +31,9 @@
 	
 	# Testing same wrong types
 	>>> same_list = My_list()
+	#testing empty list
+	>>> same_list.append()
+	[]
 	
 	>>> same_list.append("b")
 	>>> same_list.append("c")

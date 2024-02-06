@@ -27,3 +27,4 @@ class MyList(list):
             returns sorted self
         """
         print(sorted(self))
+        return(sorted(self))
