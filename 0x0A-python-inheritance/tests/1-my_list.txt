@@ -31,8 +31,9 @@
 	
 	# Testing same wrong types
 	>>> same_list = My_list()
+
 	#testing empty list
-	>>> same_list.append()
+	>>> same_list.print_sorted()
 	[]
 	
 	>>> same_list.append("b")
