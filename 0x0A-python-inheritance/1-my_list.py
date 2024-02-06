@@ -26,5 +26,6 @@ class MyList(list):
         --------
             returns sorted self
         """
-        print(sorted(self))
-        return(sorted(self))
+        new_list = sorted(self)
+        print(new_list)
+        
