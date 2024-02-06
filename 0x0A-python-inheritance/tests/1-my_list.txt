@@ -1,0 +1,48 @@
+"""
+>>> My_list = __import__('1-my_list').MyList
+	
+	#creating an instance of the class My_list
+	>>> my_list = My_list()
+	
+	>>> my_list.append(2)
+	>>> my_list.append(1)
+	>>> print(my_list)
+	[2, 1]
+	>>> my_list.print_sorted()
+	[1, 2]
+	>>> my_list.append(None)
+	>>> my_list.print_sorted()
+	Traceback (most recent call last):
+	...
+	TypeError: '<' not supported between instances of 'NoneType' and 'int'
+	
+	#second instance of the class My_list
+	>>> test_list = My_list()
+	
+	>>> test_list.append('wonka')
+	>>> test_list.append(2)
+
+	>>> print(test_list)
+	['wonka', 2]
+	>>> test_list.print_sorted()
+	Traceback (most recent call last):
+	...
+	TypeError: '<' not supported between instances of 'int' and 'str'
+	
+	# Testing same wrong types
+	>>> same_list = My_list()
+	
+	>>> same_list.append("b")
+	>>> same_list.append("c")
+	
+	>>> same_list.print_sorted()
+	['b', 'c']
+	>>> same_list.append(None)
+	>>> same_list.print_sorted()
+	Traceback (most recent call last):
+	...
+	TypeError: '<' not supported between instances of 'NoneType' and 'str'
+	
+
+
+"""
