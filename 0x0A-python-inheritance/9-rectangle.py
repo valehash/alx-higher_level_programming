@@ -29,4 +29,4 @@ class Rectangle(Bg):
     def __str__(self):
         """The str function to displa what the class prints"""
 
-        return "[Rectangle]{}/{}".format(self.__width,self.__height)
+        return "[Rectangle] {}/{}".format(self.__width,self.__height)
