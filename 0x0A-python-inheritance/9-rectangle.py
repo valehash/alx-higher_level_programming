@@ -15,13 +15,11 @@ class Rectangle(Bg):
         height:
             The height of the rectangle
         """
-        
-        self.__width = width
-        self.__height = height
+        super().integer_validator("width", width)
+        super().integer_validator("height",height)
 
-        super().integer_validator("width", self.__width)
-        super().integer_validator("height",self.__height)
-        
+        self.__width = width
+        self.__height = height 
     
     def area(self):
         """The area function that returns the area of the rectangle"""
