@@ -24,8 +24,11 @@ class Rectangle(Bg):
         
     
     def area(self):
+        """The area function that returns the area of the rectangle"""
         area = self.__width * self.__height
         return area
 
     def __str__(self):
+        """The str function to displa what the class prints"""
+
         return "[Rectangle]{}/{}".format(self.__width,self.__height)
