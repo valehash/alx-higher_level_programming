@@ -33,3 +33,18 @@ ValueError: number must be greater than 0
 Traceback (most recent call last):
 	...
 TypeError: number must be an integer
+
+>>> bg.integer_validator("number",[40, 20]) 
+Traceback (most recent call last):
+	...
+TypeError: number must be an integer
+
+>>> bg.integer_validator("number", True) 
+Traceback (most recent call last):
+	...
+TypeError: number must be an integer
+
+>>> bg.integer_validator("number",(20, 30)) 
+Traceback (most recent call last):
+	...
+TypeError: number must be an integer
