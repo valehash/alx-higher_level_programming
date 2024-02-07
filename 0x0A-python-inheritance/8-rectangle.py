@@ -1,22 +1,9 @@
 #!/usr/bin/python3
-""" A modulue that builds upon the previous task  """
+""" A module that builds upon the previous task  """
+Bg = __import__('7-base_geometry').BaseGeometry
 
 
-class BaseGeometry:
-    """ A BaseGeometry class."""
-
-    def area(self):
-        """ A method that raises an exception. whem the exception is supposed to be raised"""
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        """ Checks if the the values passed are valid. or if they are not"""
-        if type(value) is not int:
-            raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
-
-class Rectangle(BaseGeometry):
+class Rectangle(Bg):
     """The rectangle class."""
 
     def __init__(self, width, height):
@@ -28,5 +15,5 @@ class Rectangle(BaseGeometry):
         height:
             The height of the rectangle
         """
-        width = self.integer_validator(self, width)
-        height = self.integer_validator(self,height)
+        width = self.integer_validator("width", width)
+        height = self.integer_validator("height",height)
