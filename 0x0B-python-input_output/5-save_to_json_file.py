@@ -15,6 +15,7 @@ def save_to_json_file(my_obj, filename):
         Json string
     -----
     """
-    to_append = json.JSONEncoder().encode(my_obj)
-    with open(filename, 'a', encoding='utf-8') as file:
-        file.write(to_append)
+    json.JSONEncoder().encode(my_obj)
+    with open(filename, 'w', encoding='utf-8') as file:
+        file.write(json.JSONEncoder().encode(my_obj)
+)
