@@ -16,8 +16,7 @@ def append_write(filename="",text=""):
         The lenght if what was appended
     -----
     """
-
     with open(filename,'a', encoding = 'utf-8') as file:
         file.write("{}".format(text))
-    
+
     return(len(text))
