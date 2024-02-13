@@ -92,10 +92,14 @@ class Rectangle(Base):
 
     def display(self):
         """function that display a rectangle of width x height with the # symbol"""
+        for b in range(self.__y):
+            print()
         for i in range(self.__height):
-                for j in range(self.__width):
-                    print("#", end="")
-                print()
+            for k in range(self.__x):
+                print(" ", end="")
+            for j in range(self.__width):
+                print("#", end="")
+            print()
     
     def __str__(self):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,self.__y,self.__width,self.__height)
