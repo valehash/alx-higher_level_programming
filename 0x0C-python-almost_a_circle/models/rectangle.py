@@ -105,10 +105,12 @@ class Rectangle(Base):
         """function to update the class by changing the return of the function"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,self.__y,self.__width,self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """function to update the values passed into the class"""
         update_list =  ["id", "width", "height", "x", "y"]
         for index in range(len(args)):
             setattr(self, update_list[index], args[index])
 
-
+        if kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
