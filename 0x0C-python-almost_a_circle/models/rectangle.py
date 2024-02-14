@@ -114,3 +114,7 @@ class Rectangle(Base):
         if kwargs:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """function to display the class attributes as a dictionary""" 
+        return self.__dict__
