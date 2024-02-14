@@ -34,12 +34,12 @@ class Square(Rectangle):
 
     
 
-    """def update(self, *args, **kwargs):
-        function to update the values passed into the class
-        update_list =  ["id", "width", "height", "x", "y"]
+    def update(self, *args, **kwargs):
+        """function to update the values passed into the class"""
+        update_list =  ["id", "width", "x", "y"]
         for index in range(len(args)):
             setattr(self, update_list[index], args[index])
 
         if kwargs:
             for key, value in kwargs.items():
-                setattr(self, key, value)"""
+                setattr(self, key, value)
