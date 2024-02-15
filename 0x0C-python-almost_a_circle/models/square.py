@@ -43,3 +43,7 @@ class Square(Rectangle):
         if kwargs:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """function to display the class attributes as a dictionary"""
+        return {key.lstrip('Rectangle__'): value for key, value in self.__dict__.items()}
