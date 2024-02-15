@@ -117,4 +117,4 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """function to display the class attributes as a dictionary""" 
-        return self.__dict__
+        return {key.lstrip('Rectangle__'): value for key, value in self.__dict__.items()}
