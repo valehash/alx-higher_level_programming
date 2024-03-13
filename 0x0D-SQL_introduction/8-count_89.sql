@@ -1,2 +1,2 @@
 -- inserting values to first_table
-SELECT COUNT(*) from first_table WHERE id = 89 and '89';
+SELECT COUNT(*) FROM first_table WHERE id = 89 AND '89';
