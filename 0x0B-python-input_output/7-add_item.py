@@ -10,13 +10,8 @@ if __name__ == "__main__":
     file_name = 'add_item.json'
     my_list =[]
     
-    for i in args:
-        my_list.append(i)
-        break
-    save_file(my_list,file_name)
-    
-    new_list = load_file(file_name)
-
-    new_list = new_list + my_list
-
-    save_file(new_list,file_name)
+    for i in len(args):
+        my_list.append(argv[i])
+        i +=1
+        
+    save_file(my_list, file_name) 
