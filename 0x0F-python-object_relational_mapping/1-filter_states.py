@@ -18,7 +18,7 @@ def connection(username, password, db_name):
 
     curr = conn.cursor()
 
-    curr.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    curr.execute("SELECT * FROM states WHERE LEFT(name, 1) = 'N' ORDER BY id ASC")
 
     query_rows = curr.fetchall()
 
