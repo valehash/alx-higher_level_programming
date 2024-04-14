@@ -18,8 +18,8 @@ def connection(username, password, db_name, searched_name):
 
     curr = conn.cursor()
 
-    curr.execute("SELECT * FROM states WHERE BINARY name='{}'
-                 ORDER BY id ASC".format(searched_name))
+    curr.execute("""SELECT * FROM states WHERE BINARY name='{}'
+                 ORDER BY id ASC""".format(searched_name))
 
     query_rows = curr.fetchall()
 
