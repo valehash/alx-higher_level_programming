@@ -1,8 +1,12 @@
 #!/usr/bin/python
+"""A module that reads the states from a db"""
+
 import sys
 import MySQLdb
 
 def connection(username, password, db_name):
+    """The function that connects to the database and runs the query to retrieve states"""
+
     conn = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=db_name, charset="utf8")
 
     curr = conn.cursor()
@@ -17,4 +21,7 @@ def connection(username, password, db_name):
     curr.close()
     conn.close()
 
-connection(sys.argv[1],sys.argv[2], sys.argv[3])
+if __name__ == '__main__':
+    connection(sys.argv[1],sys.argv[2], sys.argv[3])
+
+
