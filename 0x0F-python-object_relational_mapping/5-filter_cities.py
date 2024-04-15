@@ -5,7 +5,7 @@ import sys
 import MySQLdb
 
 
-def connection(username, password, db_name, searched_name):
+def connection(username, password, db_name):
     """The function that connects to the db"""
 
     conn = MySQLdb.connect(
@@ -18,10 +18,11 @@ def connection(username, password, db_name, searched_name):
 
     curr = conn.cursor()
 
-    query = """SELECT * FROM cities LEFT JOIN states ON cities.state_id = states.id  WHERE BINARY cities.name=%s
-"""
+    query = """SELECT cities.id, cities.name,
+    states.name FROM cities LEFT JOIN
+    states on cities.state_id = states.id"""
 
-    curr.execute(query, (searched_name,))
+    curr.execute(query)
 
     query_rows = curr.fetchall()
 
@@ -33,4 +34,4 @@ def connection(username, password, db_name, searched_name):
 
 
 if __name__ == '__main__':
-    connection(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+    connection(sys.argv[1], sys.argv[2], sys.argv[3])
