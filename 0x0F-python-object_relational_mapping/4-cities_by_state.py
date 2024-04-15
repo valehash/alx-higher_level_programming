@@ -18,7 +18,9 @@ def connection(username, password, db_name):
 
     curr = conn.cursor()
 
-    query = """SELECT cities.id, cities.name, states.name FROM cities LEFT JOIN states on cities.state_id = states.id"""
+    query = """SELECT cities.id, cities.name,
+    states.name FROM cities LEFT JOIN
+    states on cities.state_id = states.id"""
 
     curr.execute(query)
 
