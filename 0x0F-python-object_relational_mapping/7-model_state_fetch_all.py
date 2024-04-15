@@ -22,7 +22,7 @@ def list_states(username, password, db_name):
     all_states = session.query(State).order_by(State.id).all()
 
     for state in all_states:
-        print(f"{state.id} : {state.name}")
+        print(f"{state.id}: {state.name}")
 
     session.close()
 
