@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 Lists all State objects that contain the letter a from the database
 """
@@ -9,6 +10,7 @@ from model_state import Base, State
 
 
 def main(username, password, dbname):
+    """Function get all srats that conntain the letter a"""
     db_url = f"""mysql+mysqldb://{username}:{password}@localhost:3306/{dbname}"""
     engine = create_engine(db_url)
 
