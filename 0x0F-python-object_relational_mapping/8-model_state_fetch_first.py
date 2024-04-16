@@ -14,7 +14,6 @@ def list_states(username, password, db_name):
         .format(username, password, db_name),
         pool_pre_ping=True)
 
-    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
 
     session = Session()
