@@ -19,7 +19,7 @@ def list_states(username, password, db_name):
 
     session = Session()
 
-    all_states = session.query(State).filter_by(id=1).first()
+    all_states = session.query(State).first()
 
     if all_states:
         print(f"{all_states.id}: {all_states.name}")
