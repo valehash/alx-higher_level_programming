@@ -11,8 +11,7 @@ def list_states(username, password, db_name):
 
     engine = create_engine(
         'mysql+mysqldb://{}:{}@localhost/{}'
-        .format(username, password, db_name),
-        pool_pre_ping=True)
+        .format(username, password, db_name))
 
     Session = sessionmaker(bind=engine)
 
