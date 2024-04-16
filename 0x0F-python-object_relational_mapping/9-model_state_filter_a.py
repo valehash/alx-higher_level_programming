@@ -9,9 +9,7 @@ from model_state import Base, State
 
 
 def main(username, password, dbname):
-    db_url = f"""mysql+mysqldb://
-    {username}:{password}@localhost:3306
-    /{dbname}"""
+    db_url = f"""mysql+mysqldb://{username}:{password}@localhost:3306/{dbname}"""
     engine = create_engine(db_url)
 
     Session = sessionmaker(bind=engine)
