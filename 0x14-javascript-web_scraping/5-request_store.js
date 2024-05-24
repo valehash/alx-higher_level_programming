@@ -6,7 +6,7 @@ const fs = require('node:fs')
 
 const req = require('request');
 
-const filename = 'loremimpsom';
+const filename = 'loripsum';
 console.log(url);
 
 req(url, (error, response, body) => {
