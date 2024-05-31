@@ -15,4 +15,6 @@ req(url, { json: true }, (error, response, body) => {
   if (error) console.error(error);
 
   console.log(body.title);
+
+  console.log(body.title);
 });
