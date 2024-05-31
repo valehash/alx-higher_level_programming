@@ -1,20 +1,15 @@
 #!/usr/bin/node
 // code to get the title of starwars using the api
 
-const name = 'https://swapi-api.alx-tools.com/api/films/';
 
-const id = process.argv[2];
+const request = require('request');
+const name = process.argv[2];
 
-const url = name + id;
+const url = 'https://swapi-api.alx-tools.com/api/films/';
+const result = url.concat(name);
 
-const req = require('request');
-
-console.log(url);
-
-req(url, { json: true }, (error, response, body) => {
-  if (error) console.error(error);
-
-  console.log(body.title);
+request(result, { json: true }, (error, response, body) => {
+  if (error) console.log(error);
 
   console.log(body.title);
 });
